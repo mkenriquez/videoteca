@@ -1,0 +1,7 @@
+{
+  "name": "videoteca",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
