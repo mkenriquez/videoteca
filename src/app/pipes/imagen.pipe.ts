@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 
-const URL_PATH = 'https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg';
+const URL = 'https://image.tmdb.org/t/p';
+
 @Pipe({
   name: 'imagen'
 })
@@ -9,7 +10,7 @@ const URL_PATH = 'https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jp
 
 export class ImagenPipe implements PipeTransform {
 
-  transform(img: string, size: string ='w500' ): unknown {
+  transform(img: string, size: string ='w500' ): string {
     if(!img){
       return;
     }
