@@ -11,6 +11,7 @@
  <ion-slides mode="ios" pager="ios">
    <ion-slide  *ngFor="let pelicula of discover">
      <h1>{{pelicula.title}}</h1>
+     <img [src]="pelicula.backdrop_path | imagen">
    </ion-slide>
  </ion-slides>
 </ion-content>
