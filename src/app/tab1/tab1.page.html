@@ -7,11 +7,10 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+ <ion-slides mode="ios" pager="ios">
+   <ion-slide  *ngFor="let pelicula of discover">
+     <h1>{{pelicula.title}}</h1>
+   </ion-slide>
+ </ion-slides>
 </ion-content>
