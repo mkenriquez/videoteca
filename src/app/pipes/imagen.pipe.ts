@@ -1,7 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
+//SOLO RUTA ENVIRONMENT NO ENVIRONMEN.PRO
 
-const URL = 'https://image.tmdb.org/t/p';
+const URL = environment.URL_PATH;
 
 @Pipe({
   name: 'imagen'
