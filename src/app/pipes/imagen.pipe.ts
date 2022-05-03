@@ -1,8 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { environment } from 'src/environments/environment';
-
+import { environment } from 'src/environments/environment.prod';
 //SOLO RUTA ENVIRONMENT NO ENVIRONMEN.PRO
-
 const URL = environment.URL_PATH;
 
 @Pipe({

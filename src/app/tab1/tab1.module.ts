@@ -6,8 +6,8 @@ import { Tab1Page } from './tab1.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 import { PipesModule } from '../pipes/pipes.module'; 
 import { Tab1PageRoutingModule } from './tab1-routing.module';
-import { SlidesBackdropComponent } from '../components/slides-backdrop/slides-backdrop.component';
 import { ComponentsModule } from '../components/components.module';
+
 
 @NgModule({
   imports: [

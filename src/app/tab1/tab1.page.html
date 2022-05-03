@@ -1,14 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Peliculas
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
+  <app-slides-backdrop [discover]="discover"></app-slides-backdrop>
+  <app-slides-poster [discover]="discover" title="cartelera"></app-slides-poster>
+
+  <!--titulo
+  cuando se le ponen los corchetes es porque recibe una variable , 
+  cuando solo esta el metodo = "" le mandamos el valor directo-->
+
+ <!-- a discover se le manda el arreglo popularity
   
+-->
+  <app-slides-poster [discover]="popularity" title="Peliculas Populares"></app-slides-poster>
+
 
     <!-- <ion-grid fixed> 
         <ion-row>

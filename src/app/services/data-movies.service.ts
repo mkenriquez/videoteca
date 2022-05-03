@@ -71,4 +71,10 @@ export class DataMoviesService {
       
 
           }
+
+          getPopularity(){
+            
+            return  this.execQuery<ResultTMDB>(`/discover/movie?short_by=popularity.asc`);
+      
+          }
 }

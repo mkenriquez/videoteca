@@ -2,21 +2,27 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { SlidesBackdropComponent } from './slides-backdrop/slides-backdrop.component';
-import { ImagenPipe } from '../pipes/imagen.pipe';
+import { PipesModule } from '../pipes/pipes.module';
+import { SlidesPosterComponent } from './slides-poster/slides-poster.component';
+import { DetailsComponent } from './details/details.component';
 
 
 
 @NgModule({
   declarations: [
-    SlidesBackdropComponent
+    SlidesBackdropComponent,
+    SlidesPosterComponent,
+    DetailsComponent
   ],
-  exports:[
-    SlidesBackdropComponent
+  exports: [
+    SlidesBackdropComponent,
+     SlidesPosterComponent,
+     DetailsComponent
   ],
   imports: [
     CommonModule,
     IonicModule,
-    ImagenPipe
+    PipesModule
   ]
 })
 export class ComponentsModule { }

@@ -8,11 +8,9 @@ import { ImagenPipe } from './imagen.pipe';
   declarations: [
     ImagenPipe
   ],
-
   exports: [
-    ImagenPipe
+   ImagenPipe
   ],
-  
   imports: [
     CommonModule
   ]
