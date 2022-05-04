@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ResultTMDB } from '../interfaces/interfaces';
+import { ResultDetails, ResultTMDB ,Cast, ResultCredits} from '../interfaces/interfaces';
 import { environment } from 'src/environments/environment';
 
 //Constantes traidas de environment 
@@ -24,6 +24,10 @@ export class DataMoviesService {
     // += es para concatena la query + otra cosa , se le agrega '&' por
     query += `&api_key=${API_KEY}&language=es`  // 'https://api.themoviedb.org/3/discover/movie?api_key=ab4c7f325d588c10b01034205f2d91ec&language=es&primary_release_date.gte=2022-03-01&primary_release_date.lte=2022-03-31
   
+
+   //imprimir variable query
+   // console.log(query);
+   
     return this.http.get<T>(query);
   }
 
@@ -71,10 +75,25 @@ export class DataMoviesService {
       
 
           }
-
+      // servicio para traer las peliculas populares.
           getPopularity(){
             
-            return  this.execQuery<ResultTMDB>(`/discover/movie?short_by=popularity.asc`);
-      
+            return this.execQuery<ResultTMDB>(`/discover/movie?sort_by=popularity.asc`);
+
           }
+
+          //servicio para traer los detalles de una pelicula.
+          getDetails(id:number){
+            return this.execQuery<ResultDetails>(`/movie/${id}?a=1`);
+          }
+
+          getCredits(id:number){
+            return this.execQuery<ResultCredits>(`/movie/${id}/credits?a=1`);
+          }
+
+
+          //metodos de envio de datos
+          // get y post
+          //get envia datos a traves de un url
+          //post lo manda de manera oculta 
 }
